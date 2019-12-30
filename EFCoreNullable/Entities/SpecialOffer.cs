@@ -48,6 +48,6 @@ namespace EFCoreNullable.Entities
         public DateTime ModifiedDate { get; set; }
 
         [InverseProperty("SpecialOffer")]
-        public virtual ICollection<SpecialOfferProduct> SpecialOfferProduct { get; set; }
+        public ICollection<SpecialOfferProduct> SpecialOfferProduct { get; }
     }
 }

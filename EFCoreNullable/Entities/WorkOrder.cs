@@ -48,6 +48,6 @@ namespace EFCoreNullable.Entities
         public virtual ScrapReason? ScrapReason { get; set; }
 
         [InverseProperty("WorkOrder")]
-        public virtual ICollection<WorkOrderRouting> WorkOrderRouting { get; set; }
+        public ICollection<WorkOrderRouting> WorkOrderRouting { get; }
     }
 }

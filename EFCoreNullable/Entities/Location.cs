@@ -32,9 +32,9 @@ namespace EFCoreNullable.Entities
         public DateTime ModifiedDate { get; set; }
 
         [InverseProperty("Location")]
-        public virtual ICollection<ProductInventory> ProductInventory { get; set; }
+        public ICollection<ProductInventory> ProductInventory { get; }
 
         [InverseProperty("Location")]
-        public virtual ICollection<WorkOrderRouting> WorkOrderRouting { get; set; }
+        public ICollection<WorkOrderRouting> WorkOrderRouting { get; }
     }
 }

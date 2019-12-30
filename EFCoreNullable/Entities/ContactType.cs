@@ -25,6 +25,6 @@ namespace EFCoreNullable.Entities
         public DateTime ModifiedDate { get; set; }
 
         [InverseProperty("ContactType")]
-        public virtual ICollection<BusinessEntityContact> BusinessEntityContact { get; set; }
+        public ICollection<BusinessEntityContact> BusinessEntityContact { get; }
     }
 }

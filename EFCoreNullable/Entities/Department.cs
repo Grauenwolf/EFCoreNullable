@@ -29,6 +29,6 @@ namespace EFCoreNullable.Entities
         public DateTime ModifiedDate { get; set; }
 
         [InverseProperty("Department")]
-        public virtual ICollection<EmployeeDepartmentHistory> EmployeeDepartmentHistory { get; set; }
+        public ICollection<EmployeeDepartmentHistory> EmployeeDepartmentHistory { get; }
     }
 }

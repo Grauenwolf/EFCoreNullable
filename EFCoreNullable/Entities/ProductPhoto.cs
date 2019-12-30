@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 namespace EFCoreNullable.Entities
 {
@@ -17,11 +18,13 @@ namespace EFCoreNullable.Entities
         [Column("ProductPhotoID")]
         public int ProductPhotoId { get; set; }
 
+        [SuppressMessage("Performance", "CA1819")]
         public byte[]? ThumbNailPhoto { get; set; }
 
         [StringLength(50)]
         public string? ThumbnailPhotoFileName { get; set; }
 
+        [SuppressMessage("Performance", "CA1819")]
         public byte[]? LargePhoto { get; set; }
 
         [StringLength(50)]
@@ -31,6 +34,6 @@ namespace EFCoreNullable.Entities
         public DateTime ModifiedDate { get; set; }
 
         [InverseProperty("ProductPhoto")]
-        public virtual ICollection<ProductProductPhoto> ProductProductPhoto { get; set; }
+        public ICollection<ProductProductPhoto> ProductProductPhoto { get; }
     }
 }

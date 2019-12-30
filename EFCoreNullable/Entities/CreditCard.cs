@@ -33,9 +33,9 @@ namespace EFCoreNullable.Entities
         public DateTime ModifiedDate { get; set; }
 
         [InverseProperty("CreditCard")]
-        public virtual ICollection<PersonCreditCard> PersonCreditCard { get; set; }
+        public ICollection<PersonCreditCard> PersonCreditCard { get; }
 
         [InverseProperty("CreditCard")]
-        public virtual ICollection<SalesOrderHeader> SalesOrderHeader { get; set; }
+        public ICollection<SalesOrderHeader> SalesOrderHeader { get; }
     }
 }

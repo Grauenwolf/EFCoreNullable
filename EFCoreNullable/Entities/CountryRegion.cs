@@ -27,12 +27,12 @@ namespace EFCoreNullable.Entities
         public DateTime ModifiedDate { get; set; }
 
         [InverseProperty("CountryRegionCodeNavigation")]
-        public virtual ICollection<CountryRegionCurrency> CountryRegionCurrency { get; set; }
+        public ICollection<CountryRegionCurrency> CountryRegionCurrency { get; }
 
         [InverseProperty("CountryRegionCodeNavigation")]
-        public virtual ICollection<SalesTerritory> SalesTerritory { get; set; }
+        public ICollection<SalesTerritory> SalesTerritory { get; }
 
         [InverseProperty("CountryRegionCodeNavigation")]
-        public virtual ICollection<StateProvince> StateProvince { get; set; }
+        public ICollection<StateProvince> StateProvince { get; }
     }
 }

@@ -48,12 +48,12 @@ namespace EFCoreNullable.Entities
         public virtual StateProvince? StateProvince { get; set; }
 
         [InverseProperty("Address")]
-        public virtual ICollection<BusinessEntityAddress> BusinessEntityAddress { get; set; }
+        public ICollection<BusinessEntityAddress> BusinessEntityAddress { get; }
 
         [InverseProperty(nameof(SalesOrderHeader.BillToAddress))]
-        public virtual ICollection<SalesOrderHeader> SalesOrderHeaderBillToAddress { get; set; }
+        public ICollection<SalesOrderHeader> SalesOrderHeaderBillToAddress { get; }
 
         [InverseProperty(nameof(SalesOrderHeader.ShipToAddress))]
-        public virtual ICollection<SalesOrderHeader> SalesOrderHeaderShipToAddress { get; set; }
+        public ICollection<SalesOrderHeader> SalesOrderHeaderShipToAddress { get; }
     }
 }

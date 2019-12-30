@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 namespace EFCoreNullable.Entities
 {
@@ -22,6 +23,7 @@ namespace EFCoreNullable.Entities
 
         [Column("ProductURL")]
         [StringLength(256)]
+        [SuppressMessage("Design", "CA1056")]
         public string? ProductUrl { get; set; }
 
         [StringLength(256)]

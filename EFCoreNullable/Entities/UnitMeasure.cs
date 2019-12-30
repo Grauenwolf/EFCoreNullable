@@ -28,15 +28,15 @@ namespace EFCoreNullable.Entities
         public DateTime ModifiedDate { get; set; }
 
         [InverseProperty("UnitMeasureCodeNavigation")]
-        public virtual ICollection<BillOfMaterials> BillOfMaterials { get; set; }
+        public ICollection<BillOfMaterials> BillOfMaterials { get; }
 
         [InverseProperty(nameof(Product.SizeUnitMeasureCodeNavigation))]
-        public virtual ICollection<Product> ProductSizeUnitMeasureCodeNavigation { get; set; }
+        public ICollection<Product> ProductSizeUnitMeasureCodeNavigation { get; }
 
         [InverseProperty("UnitMeasureCodeNavigation")]
-        public virtual ICollection<ProductVendor> ProductVendor { get; set; }
+        public ICollection<ProductVendor> ProductVendor { get; }
 
         [InverseProperty(nameof(Product.WeightUnitMeasureCodeNavigation))]
-        public virtual ICollection<Product> ProductWeightUnitMeasureCodeNavigation { get; set; }
+        public ICollection<Product> ProductWeightUnitMeasureCodeNavigation { get; }
     }
 }

@@ -35,6 +35,6 @@ namespace EFCoreNullable.Entities
         public virtual ProductCategory? ProductCategory { get; set; }
 
         [InverseProperty("ProductSubcategory")]
-        public virtual ICollection<Product> Product { get; set; }
+        public ICollection<Product> Product { get; }
     }
 }

@@ -1,6 +1,5 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace EFCoreNullable.Entities
 {
@@ -111,12 +110,11 @@ namespace EFCoreNullable.Entities
         // Unable to generate entity type for table 'Production.Document'. Please see the warning messages.
         // Unable to generate entity type for table 'Production.ProductDocument'. Please see the warning messages.
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            if (modelBuilder == null)
+                throw new ArgumentNullException(nameof(modelBuilder), $"{nameof(modelBuilder)} is null.");
+
 #nullable disable
 
             modelBuilder.Entity<Address>(entity =>

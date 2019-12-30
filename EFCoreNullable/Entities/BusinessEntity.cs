@@ -34,9 +34,9 @@ namespace EFCoreNullable.Entities
         public virtual Vendor? Vendor { get; set; }
 
         [InverseProperty("BusinessEntity")]
-        public virtual ICollection<BusinessEntityAddress> BusinessEntityAddress { get; set; }
+        public ICollection<BusinessEntityAddress> BusinessEntityAddress { get; }
 
         [InverseProperty("BusinessEntity")]
-        public virtual ICollection<BusinessEntityContact> BusinessEntityContact { get; set; }
+        public ICollection<BusinessEntityContact> BusinessEntityContact { get; }
     }
 }

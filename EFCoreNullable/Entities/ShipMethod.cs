@@ -35,9 +35,9 @@ namespace EFCoreNullable.Entities
         public DateTime ModifiedDate { get; set; }
 
         [InverseProperty("ShipMethod")]
-        public virtual ICollection<PurchaseOrderHeader> PurchaseOrderHeader { get; set; }
+        public ICollection<PurchaseOrderHeader> PurchaseOrderHeader { get; }
 
         [InverseProperty("ShipMethod")]
-        public virtual ICollection<SalesOrderHeader> SalesOrderHeader { get; set; }
+        public ICollection<SalesOrderHeader> SalesOrderHeader { get; }
     }
 }

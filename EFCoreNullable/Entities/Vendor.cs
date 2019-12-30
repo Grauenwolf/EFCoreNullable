@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 namespace EFCoreNullable.Entities
 {
@@ -36,6 +37,7 @@ namespace EFCoreNullable.Entities
 
         [Column("PurchasingWebServiceURL")]
         [StringLength(1024)]
+        [SuppressMessage("Design", "CA1056")]
         public string? PurchasingWebServiceUrl { get; set; }
 
         [Column(TypeName = "datetime")]
@@ -46,9 +48,9 @@ namespace EFCoreNullable.Entities
         public virtual BusinessEntity? BusinessEntity { get; set; }
 
         [InverseProperty("BusinessEntity")]
-        public virtual ICollection<ProductVendor> ProductVendor { get; set; }
+        public ICollection<ProductVendor> ProductVendor { get; }
 
         [InverseProperty("Vendor")]
-        public virtual ICollection<PurchaseOrderHeader> PurchaseOrderHeader { get; set; }
+        public ICollection<PurchaseOrderHeader> PurchaseOrderHeader { get; }
     }
 }

@@ -36,6 +36,6 @@ namespace EFCoreNullable.Entities
         public virtual SpecialOffer? SpecialOffer { get; set; }
 
         [InverseProperty("SpecialOfferProduct")]
-        public virtual ICollection<SalesOrderDetail> SalesOrderDetail { get; set; }
+        public ICollection<SalesOrderDetail> SalesOrderDetail { get; }
     }
 }

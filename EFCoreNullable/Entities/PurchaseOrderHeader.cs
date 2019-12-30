@@ -63,6 +63,6 @@ namespace EFCoreNullable.Entities
         public virtual Vendor? Vendor { get; set; }
 
         [InverseProperty("PurchaseOrder")]
-        public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetail { get; set; }
+        public ICollection<PurchaseOrderDetail> PurchaseOrderDetail { get; }
     }
 }

@@ -28,6 +28,6 @@ namespace EFCoreNullable.Entities
         public DateTime ModifiedDate { get; set; }
 
         [InverseProperty("AddressType")]
-        public virtual ICollection<BusinessEntityAddress> BusinessEntityAddress { get; set; }
+        public ICollection<BusinessEntityAddress> BusinessEntityAddress { get; }
     }
 }

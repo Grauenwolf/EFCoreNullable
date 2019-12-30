@@ -56,18 +56,18 @@ namespace EFCoreNullable.Entities
         public virtual CountryRegion? CountryRegionCodeNavigation { get; set; }
 
         [InverseProperty("Territory")]
-        public virtual ICollection<Customer> Customer { get; set; }
+        public ICollection<Customer> Customer { get; }
 
         [InverseProperty("Territory")]
-        public virtual ICollection<SalesOrderHeader> SalesOrderHeader { get; set; }
+        public ICollection<SalesOrderHeader> SalesOrderHeader { get; }
 
         [InverseProperty("Territory")]
-        public virtual ICollection<SalesPerson> SalesPerson { get; set; }
+        public ICollection<SalesPerson> SalesPerson { get; }
 
         [InverseProperty("Territory")]
-        public virtual ICollection<SalesTerritoryHistory> SalesTerritoryHistory { get; set; }
+        public ICollection<SalesTerritoryHistory> SalesTerritoryHistory { get; }
 
         [InverseProperty("Territory")]
-        public virtual ICollection<StateProvince> StateProvince { get; set; }
+        public ICollection<StateProvince> StateProvince { get; }
     }
 }

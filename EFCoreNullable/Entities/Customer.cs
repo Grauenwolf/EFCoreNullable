@@ -49,6 +49,6 @@ namespace EFCoreNullable.Entities
         public virtual SalesTerritory? Territory { get; set; }
 
         [InverseProperty("Customer")]
-        public virtual ICollection<SalesOrderHeader> SalesOrderHeader { get; set; }
+        public ICollection<SalesOrderHeader> SalesOrderHeader { get; }
     }
 }

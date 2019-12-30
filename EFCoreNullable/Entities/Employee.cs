@@ -73,15 +73,15 @@ namespace EFCoreNullable.Entities
         public virtual SalesPerson? SalesPerson { get; set; }
 
         [InverseProperty("BusinessEntity")]
-        public virtual ICollection<EmployeeDepartmentHistory> EmployeeDepartmentHistory { get; set; }
+        public ICollection<EmployeeDepartmentHistory> EmployeeDepartmentHistory { get; }
 
         [InverseProperty("BusinessEntity")]
-        public virtual ICollection<EmployeePayHistory> EmployeePayHistory { get; set; }
+        public ICollection<EmployeePayHistory> EmployeePayHistory { get; }
 
         [InverseProperty("BusinessEntity")]
-        public virtual ICollection<JobCandidate> JobCandidate { get; set; }
+        public ICollection<JobCandidate> JobCandidate { get; }
 
         [InverseProperty("Employee")]
-        public virtual ICollection<PurchaseOrderHeader> PurchaseOrderHeader { get; set; }
+        public ICollection<PurchaseOrderHeader> PurchaseOrderHeader { get; }
     }
 }

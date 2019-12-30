@@ -25,6 +25,6 @@ namespace EFCoreNullable.Entities
         public DateTime ModifiedDate { get; set; }
 
         [InverseProperty("PhoneNumberType")]
-        public virtual ICollection<PersonPhone> PersonPhone { get; set; }
+        public ICollection<PersonPhone> PersonPhone { get; }
     }
 }

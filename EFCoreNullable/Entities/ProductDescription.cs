@@ -28,6 +28,6 @@ namespace EFCoreNullable.Entities
         public DateTime ModifiedDate { get; set; }
 
         [InverseProperty("ProductDescription")]
-        public virtual ICollection<ProductModelProductDescriptionCulture> ProductModelProductDescriptionCulture { get; set; }
+        public ICollection<ProductModelProductDescriptionCulture> ProductModelProductDescriptionCulture { get; }
     }
 }

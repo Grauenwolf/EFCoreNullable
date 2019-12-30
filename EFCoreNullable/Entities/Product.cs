@@ -116,42 +116,42 @@ namespace EFCoreNullable.Entities
         public virtual UnitMeasure? WeightUnitMeasureCodeNavigation { get; set; }
 
         [InverseProperty(nameof(BillOfMaterials.Component))]
-        public virtual ICollection<BillOfMaterials> BillOfMaterialsComponent { get; set; }
+        public ICollection<BillOfMaterials> BillOfMaterialsComponent { get; }
 
         [InverseProperty(nameof(BillOfMaterials.ProductAssembly))]
-        public virtual ICollection<BillOfMaterials> BillOfMaterialsProductAssembly { get; set; }
+        public ICollection<BillOfMaterials> BillOfMaterialsProductAssembly { get; }
 
         [InverseProperty("Product")]
-        public virtual ICollection<ProductCostHistory> ProductCostHistory { get; set; }
+        public ICollection<ProductCostHistory> ProductCostHistory { get; }
 
         [InverseProperty("Product")]
-        public virtual ICollection<ProductInventory> ProductInventory { get; set; }
+        public ICollection<ProductInventory> ProductInventory { get; }
 
         [InverseProperty("Product")]
-        public virtual ICollection<ProductListPriceHistory> ProductListPriceHistory { get; set; }
+        public ICollection<ProductListPriceHistory> ProductListPriceHistory { get; }
 
         [InverseProperty("Product")]
-        public virtual ICollection<ProductProductPhoto> ProductProductPhoto { get; set; }
+        public ICollection<ProductProductPhoto> ProductProductPhoto { get; }
 
         [InverseProperty("Product")]
-        public virtual ICollection<ProductReview> ProductReview { get; set; }
+        public ICollection<ProductReview> ProductReview { get; }
 
         [InverseProperty("Product")]
-        public virtual ICollection<ProductVendor> ProductVendor { get; set; }
+        public ICollection<ProductVendor> ProductVendor { get; }
 
         [InverseProperty("Product")]
-        public virtual ICollection<PurchaseOrderDetail> PurchaseOrderDetail { get; set; }
+        public ICollection<PurchaseOrderDetail> PurchaseOrderDetail { get; }
 
         [InverseProperty("Product")]
-        public virtual ICollection<ShoppingCartItem> ShoppingCartItem { get; set; }
+        public ICollection<ShoppingCartItem> ShoppingCartItem { get; }
 
         [InverseProperty("Product")]
-        public virtual ICollection<SpecialOfferProduct> SpecialOfferProduct { get; set; }
+        public ICollection<SpecialOfferProduct> SpecialOfferProduct { get; }
 
         [InverseProperty("Product")]
-        public virtual ICollection<TransactionHistory> TransactionHistory { get; set; }
+        public ICollection<TransactionHistory> TransactionHistory { get; }
 
         [InverseProperty("Product")]
-        public virtual ICollection<WorkOrder> WorkOrder { get; set; }
+        public ICollection<WorkOrder> WorkOrder { get; }
     }
 }

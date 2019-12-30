@@ -28,6 +28,6 @@ namespace EFCoreNullable.Entities
         public DateTime ModifiedDate { get; set; }
 
         [InverseProperty("ProductCategory")]
-        public virtual ICollection<ProductSubcategory> ProductSubcategory { get; set; }
+        public ICollection<ProductSubcategory> ProductSubcategory { get; }
     }
 }

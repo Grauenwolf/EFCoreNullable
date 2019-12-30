@@ -51,9 +51,9 @@ namespace EFCoreNullable.Entities
         public virtual SalesTerritory? Territory { get; set; }
 
         [InverseProperty("StateProvince")]
-        public virtual ICollection<Address> Address { get; set; }
+        public ICollection<Address> Address { get; }
 
         [InverseProperty("StateProvince")]
-        public virtual ICollection<SalesTaxRate> SalesTaxRate { get; set; }
+        public ICollection<SalesTaxRate> SalesTaxRate { get; }
     }
 }

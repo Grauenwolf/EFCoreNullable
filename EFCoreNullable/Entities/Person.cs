@@ -69,18 +69,18 @@ namespace EFCoreNullable.Entities
         public virtual Password? Password { get; set; }
 
         [InverseProperty("Person")]
-        public virtual ICollection<BusinessEntityContact> BusinessEntityContact { get; set; }
+        public ICollection<BusinessEntityContact> BusinessEntityContact { get; }
 
         [InverseProperty("Person")]
-        public virtual ICollection<Customer> Customer { get; set; }
+        public ICollection<Customer> Customer { get; }
 
         [InverseProperty("BusinessEntity")]
-        public virtual ICollection<EmailAddress> EmailAddress { get; set; }
+        public ICollection<EmailAddress> EmailAddress { get; }
 
         [InverseProperty("BusinessEntity")]
-        public virtual ICollection<PersonCreditCard> PersonCreditCard { get; set; }
+        public ICollection<PersonCreditCard> PersonCreditCard { get; }
 
         [InverseProperty("BusinessEntity")]
-        public virtual ICollection<PersonPhone> PersonPhone { get; set; }
+        public ICollection<PersonPhone> PersonPhone { get; }
     }
 }

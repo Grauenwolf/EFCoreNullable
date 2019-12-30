@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 
 namespace EFCoreNullable.Entities
 {
@@ -26,6 +27,7 @@ namespace EFCoreNullable.Entities
         public string? Schema { get; set; }
 
         [StringLength(128)]
+        [SuppressMessage("Naming", "CA1720")]
         public string? Object { get; set; }
 
         [Required]

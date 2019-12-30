@@ -25,6 +25,6 @@ namespace EFCoreNullable.Entities
         public DateTime ModifiedDate { get; set; }
 
         [InverseProperty("ScrapReason")]
-        public virtual ICollection<WorkOrder> WorkOrder { get; set; }
+        public ICollection<WorkOrder> WorkOrder { get; }
     }
 }

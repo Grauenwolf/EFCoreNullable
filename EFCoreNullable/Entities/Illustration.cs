@@ -24,6 +24,6 @@ namespace EFCoreNullable.Entities
         public DateTime ModifiedDate { get; set; }
 
         [InverseProperty("Illustration")]
-        public virtual ICollection<ProductModelIllustration> ProductModelIllustration { get; set; }
+        public ICollection<ProductModelIllustration> ProductModelIllustration { get; }
     }
 }

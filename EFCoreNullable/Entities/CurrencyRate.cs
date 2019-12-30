@@ -46,6 +46,6 @@ namespace EFCoreNullable.Entities
         public virtual Currency? ToCurrencyCodeNavigation { get; set; }
 
         [InverseProperty("CurrencyRate")]
-        public virtual ICollection<SalesOrderHeader> SalesOrderHeader { get; set; }
+        public ICollection<SalesOrderHeader> SalesOrderHeader { get; }
     }
 }

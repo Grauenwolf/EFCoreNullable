@@ -29,6 +29,6 @@ namespace EFCoreNullable.Entities
         public DateTime ModifiedDate { get; set; }
 
         [InverseProperty("SalesReason")]
-        public virtual ICollection<SalesOrderHeaderSalesReason> SalesOrderHeaderSalesReason { get; set; }
+        public ICollection<SalesOrderHeaderSalesReason> SalesOrderHeaderSalesReason { get; }
     }
 }

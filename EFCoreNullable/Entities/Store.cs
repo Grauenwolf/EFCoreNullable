@@ -42,6 +42,6 @@ namespace EFCoreNullable.Entities
         public virtual SalesPerson? SalesPerson { get; set; }
 
         [InverseProperty("Store")]
-        public virtual ICollection<Customer> Customer { get; set; }
+        public ICollection<Customer> Customer { get; }
     }
 }

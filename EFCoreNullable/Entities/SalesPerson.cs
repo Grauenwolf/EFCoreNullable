@@ -53,15 +53,15 @@ namespace EFCoreNullable.Entities
         public virtual SalesTerritory? Territory { get; set; }
 
         [InverseProperty("SalesPerson")]
-        public virtual ICollection<SalesOrderHeader> SalesOrderHeader { get; set; }
+        public ICollection<SalesOrderHeader> SalesOrderHeader { get; }
 
         [InverseProperty("BusinessEntity")]
-        public virtual ICollection<SalesPersonQuotaHistory> SalesPersonQuotaHistory { get; set; }
+        public ICollection<SalesPersonQuotaHistory> SalesPersonQuotaHistory { get; }
 
         [InverseProperty("BusinessEntity")]
-        public virtual ICollection<SalesTerritoryHistory> SalesTerritoryHistory { get; set; }
+        public ICollection<SalesTerritoryHistory> SalesTerritoryHistory { get; }
 
         [InverseProperty("SalesPerson")]
-        public virtual ICollection<Store> Store { get; set; }
+        public ICollection<Store> Store { get; }
     }
 }
